@@ -1,0 +1,86 @@
+// home.component.scss
+@import '../../styles/variables';
+
+.hero-section {
+  background: linear-gradient(145deg, $bg-gradient-1, $bg-gradient-3);
+  padding: 4rem 2rem;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: $primary-dark;
+  }
+
+  .search-bar {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+
+    input {
+      flex: 1;
+      padding: 1rem;
+      border-radius: 30px;
+      border: 1px solid $light-accent-2;
+    }
+  }
+}
+
+.formations-section {
+  padding: 4rem 2rem;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .course-card {
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+    }
+  }
+}
+
+.testimonials-section {
+  background: $bg-gradient-4;
+  padding: 4rem 2rem;
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    background: white;
+    border-radius: 15px;
+  }
+}
+
+.features-section {
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
