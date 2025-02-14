@@ -1,0 +1,122 @@
+$primary-dark: #0f0a5f;
+$primary-accent: #c651db;
+$secondary-accent: #ae56a0;
+$light-accent-1: #deafec;
+$light-accent-2: #bcaae1;
+$bg-colors: #e8e0ed, #e2deed, #daddf0, #e2e7fa;
+$bg-gradient: linear-gradient(135deg, #e8e0ed, #e2deed,#daddf0,#e2e7fa );
+$glass-bg: rgba(255, 255, 255, 0.1);
+$shadow-lg: 0px 15px 30px rgba(0, 0, 0, 0.25);
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      145deg,
+      rgba(nth($bg-colors, 1), 0.9),
+      rgba(nth($bg-colors, 2), 0.9),
+      rgba(nth($bg-colors, 3), 0.9),
+      rgba(nth($bg-colors, 4), 0.9)
+  );
+  padding: 2rem;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: $shadow-lg;
+  background: $glass-bg;
+  backdrop-filter: blur(10px);
+
+  .signup-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, $primary-dark 30%, $secondary-accent 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+  }
+
+  .signup-subtitle {
+    color: $primary-dark;
+    opacity: 0.9;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    mat-icon {
+      color: $primary-accent;
+    }
+  }
+
+  .terms-checkbox {
+    margin: 1.5rem 0;
+    color: $primary-dark;
+
+    .terms-link {
+      color: $primary-accent;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .signup-actions {
+    margin-top: 2rem;
+
+    button {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      background: $primary-accent;
+      color: white;
+
+      &:hover {
+        background: $secondary-accent;
+      }
+    }
+  }
+
+  .signup-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+
+    .login-text {
+      color: $primary-dark;
+
+      a {
+        color: $secondary-accent;
+        font-weight: 500;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 600px) {
+  .signup-card {
+    padding: 1.5rem;
+
+    .signup-title {
+      font-size: 2rem;
+    }
+  }
+}

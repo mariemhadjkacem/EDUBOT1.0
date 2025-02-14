@@ -1,6 +1,7 @@
 // welcome-page.component.scss
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
+
 /* Color Variables */
 $primary-dark: #0f0a5f;
 $primary-accent: #c651db;
@@ -9,6 +10,10 @@ $light-accent-1: #deafec;
 $light-accent-2: #bcaae1;
 $bg-colors: #e8e0ed, #e2deed, #daddf0, #e2e7fa;
 
+
+body {
+  font-family: 'Inter', sans-serif;
+}
 /* Hero Section */
 .hero-section {
   background: linear-gradient(

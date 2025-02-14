@@ -1,0 +1,79 @@
+<!-- footer.component.html -->
+<footer class="footer">
+  <div class="footer-content">
+    <!-- About Section -->
+    <div class="footer-section about">
+      <h3 class="footer-heading">EduPath</h3>
+      <p class="footer-text">
+        Transform your learning journey with expert-led courses, interactive exercises,
+        and AI-powered support.
+      </p>
+      <div class="social-links">
+        <a mat-icon-button href="#" target="_blank">
+          <mat-icon>facebook</mat-icon>
+        </a>
+        <a mat-icon-button href="#" target="_blank">
+          <mat-icon>twitter</mat-icon>
+        </a>
+        <a mat-icon-button href="#" target="_blank">
+          <mat-icon>linkedin</mat-icon>
+        </a>
+        <a mat-icon-button href="#" target="_blank">
+          <mat-icon>instagram</mat-icon>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h3 class="footer-heading">Quick Links</h3>
+      <ul class="footer-list">
+        <li><a routerLink="/about">About Us</a></li>
+        <li><a routerLink="/courses">All Courses</a></li>
+        <li><a routerLink="/pricing">Pricing</a></li>
+        <li><a routerLink="/blog">Blog</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section contact">
+      <h3 class="footer-heading">Contact Us</h3>
+      <ul class="contact-info">
+        <li>
+          <mat-icon>email</mat-icon>
+          <span>contact&#64;edupath.com</span>
+        </li>
+        <li>
+          <mat-icon>phone</mat-icon>
+          <span>+1 (555) 123-4567</span>
+        </li>
+        <li>
+          <mat-icon>location_on</mat-icon>
+          <span>123 Learning Street<br>Tech City, TC 12345</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-section newsletter">
+      <h3 class="footer-heading">Newsletter</h3>
+      <p class="footer-text">Subscribe to get latest updates</p>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Enter your email">
+        <button matSuffix mat-icon-button color="primary">
+          <mat-icon>send</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="copyright">
+    <p>© 2024 EduPath. All rights reserved</p>
+    <div class="legal-links">
+      <a routerLink="/privacy">Privacy Policy</a>
+      <a routerLink="/terms">Terms of Service</a>
+    </div>
+  </div>
+</footer>

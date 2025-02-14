@@ -1,0 +1,112 @@
+$primary-dark: #0f0a5f;
+$primary-accent: #c651db;
+$secondary-accent: #ae56a0;
+$light-accent-1: #deafec;
+$light-accent-2: #bcaae1;
+$bg-colors: #e8e0ed, #e2deed, #daddf0, #e2e7fa;
+$bg-gradient: linear-gradient(135deg, #e8e0ed, #e2deed,#daddf0,#e2e7fa );
+$glass-bg: rgba(255, 255, 255, 0.1);
+$shadow-lg: 0px 15px 30px rgba(0, 0, 0, 0.25);
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg,
+    rgba(nth($bg-colors, 1), 0.9),
+    rgba(nth($bg-colors, 2), 0.9),
+    rgba(nth($bg-colors, 3), 0.9),
+    rgba(nth($bg-colors, 4), 0.9)
+  );
+  padding: 2rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: $shadow-lg;
+  background: $glass-bg;
+  backdrop-filter: blur(10px);
+
+  .login-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, $primary-dark 30%, $secondary-accent 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+  }
+
+  .login-subtitle {
+    color: $primary-dark;
+    opacity: 0.9;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    mat-icon {
+      color: $primary-accent;
+    }
+  }
+
+  .login-actions {
+    margin-top: 2rem;
+
+    button {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      border-radius: 12px;
+    }
+  }
+
+  .login-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+
+    .forgot-password {
+      color: $primary-accent;
+      text-decoration: none;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .signup-text {
+      color: $primary-dark;
+
+      a {
+        color: $secondary-accent;
+        font-weight: 500;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 600px) {
+  .login-card {
+    padding: 1.5rem;
+
+    .login-title {
+      font-size: 2rem;
+    }
+  }
+}

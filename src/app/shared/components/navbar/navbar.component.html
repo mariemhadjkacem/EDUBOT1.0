@@ -1,0 +1,69 @@
+<!-- navbar.component.html -->
+<mat-toolbar color="primary" class="navbar">
+  <div class="toolbar-content">
+    <!-- Logo Section -->
+    <a routerLink="/" class="logo-container">
+      <img src="assets/images/logo.svg" alt="Platform Logo" class="logo">
+      <span class="brand-name">EduPath</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <a mat-button routerLink="/home" routerLinkActive="active-link">
+        <mat-icon>home</mat-icon>
+        Home
+      </a>
+      <a mat-button routerLink="/courses" routerLinkActive="active-link">
+        <mat-icon>school</mat-icon>
+        Formations
+      </a>
+      <a mat-button routerLink="/dashboard" routerLinkActive="active-link">
+        <mat-icon>dashboard</mat-icon>
+        Dashboard
+      </a>
+    </nav>
+
+    <!-- Auth Section -->
+    <div class="auth-section">
+      <button mat-stroked-button color="accent" routerLink="/login" class="login-btn" (click)="navigateToLogin()">
+        <mat-icon>login</mat-icon>
+        Login
+      </button>
+      <button mat-raised-button color="accent" routerLink="/signup" class="signup-btn"  (click)="navigateToSignup()">
+        <mat-icon>person_add</mat-icon>
+        Sign Up
+      </button>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button mat-icon-button class="mobile-menu" (click)="toggleMobileMenu()" aria-label="Mobile menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" [class.active]="isMobileMenuOpen">
+    <a mat-button routerLink="/home" routerLinkActive="active-link" (click)="toggleMobileMenu()">
+      <mat-icon>home</mat-icon>
+      Home
+    </a>
+    <a mat-button routerLink="/courses" routerLinkActive="active-link" (click)="toggleMobileMenu()">
+      <mat-icon>school</mat-icon>
+      Formations
+    </a>
+    <a mat-button routerLink="/dashboard" routerLinkActive="active-link" (click)="toggleMobileMenu()">
+      <mat-icon>dashboard</mat-icon>
+      Dashboard
+    </a>
+    <div class="mobile-auth">
+      <button mat-stroked-button color="accent" routerLink="/login" class="login-btn">
+        <mat-icon>login</mat-icon>
+        Login
+      </button>
+      <button mat-raised-button color="accent" routerLink="/signup" class="signup-btn">
+        <mat-icon>person_add</mat-icon>
+        Sign Up
+      </button>
+    </div>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,126 @@
+
+@use '@angular/material' as mat;
+
+
+/* Color Variables */
+$primary-dark: #0f0a5f;
+$primary-accent: #c651db;
+$secondary-accent: #ae56a0;
+$light-accent-1: #deafec;
+$light-accent-2: #bcaae1;
+$bg-colors: #e8e0ed, #e2deed, #daddf0, #e2e7fa;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+.navbar {
+  background: $primary-dark !important;
+  padding: 0 2rem;
+  position: relative;
+
+  .toolbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+
+    .logo {
+      height: 40px;
+    }
+
+    .brand-name {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+
+  .desktop-nav {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      color: white;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba($light-accent-2, 0.1);
+      }
+
+      mat-icon {
+        margin-right: 0.5rem;
+      }
+    }
+
+    .active-link {
+      background: $primary-accent;
+      color: white !important;
+    }
+  }
+
+  .auth-section {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      border-radius: 20px;
+      padding: 0 1.5rem;
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: $primary-dark;
+    padding: 1rem;
+    z-index: 1000;
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    a {
+      color: white !important;
+      justify-content: flex-start;
+    }
+
+    .mobile-auth {
+      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+
+    .desktop-nav,
+    .auth-section {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: block;
+    }
+  }
+}
