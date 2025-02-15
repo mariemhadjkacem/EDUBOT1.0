@@ -1,0 +1,43 @@
+
+
+    <main class="certification-container">
+        <div class="certificate-card">
+            <header class="certificate-header">
+                <img src="assets/images/logo.svg" alt="Platform Logo" class="certificate-logo">
+                <h2 class="certificate-title">CERTIFICATE OF APPRECIATION</h2>
+            </header>
+            
+            <section class="certificate-content">
+                <p class="certified-text">This certificate is presented to</p>
+                <h1 class="student-name">Helena Paquet</h1>
+                <p class="course-info">for success in completing the program for the degree of</p>
+                <h2 class="course-title">Cybersecurity</h2>
+            </section>
+            
+            <footer class="certificate-footer">
+                <div class="signature-container">
+                    <span class="date" id="certificate-date"></span>
+                    <div class="seal"></div>
+                    <span class="signature">Authorized Signature</span>
+                </div>
+            </footer>
+            
+            <button class="download-button" id="download-btn">Download Certificate</button>
+        </div>
+    </main>
+    
+    <script>
+        // Automatically set today's date
+        document.getElementById("certificate-date").innerText = new Date().toLocaleDateString();
+
+        // Function to download certificate
+        document.getElementById("download-btn").addEventListener("click", function() {
+            html2canvas(document.querySelector(".certificate-card")).then(canvas => {
+                let link = document.createElement("a");
+                link.download = "certificate.png";
+                link.href = canvas.toDataURL();
+                link.click();
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>

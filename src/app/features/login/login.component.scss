@@ -1,8 +1,15 @@
+<<<<<<< HEAD
+=======
+@use "sass:list";
+
+// 🎨 **Refined Color Palette**
+>>>>>>> second version
 $primary-dark: #0f0a5f;
 $primary-accent: #c651db;
 $secondary-accent: #ae56a0;
 $light-accent-1: #deafec;
 $light-accent-2: #bcaae1;
+<<<<<<< HEAD
 $bg-colors: #e8e0ed, #e2deed, #daddf0, #e2e7fa;
 $bg-gradient: linear-gradient(135deg, #e8e0ed, #e2deed,#daddf0,#e2e7fa );
 $glass-bg: rgba(255, 255, 255, 0.1);
@@ -13,10 +20,29 @@ body {
 }
 .login-container {
   min-height: 100vh;
+=======
+$bg-gradient: linear-gradient(135deg, #e8e0ed, #e2deed, #daddf0, #e2e7fa);
+$glass-bg: rgba(255, 255, 255, 0.08); // ✅ Transparent, No Blur
+$border-light: rgba(255, 255, 255, 0.25); // **Elegant Border**
+$shadow-lg: 0px 10px 25px rgba(0, 0, 0, 0.2);  // **Soft Shadow**
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: $bg-gradient;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+// 📌 **Login Container**
+.login-container {
+>>>>>>> second version
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(145deg,
+<<<<<<< HEAD
     rgba(nth($bg-colors, 1), 0.9),
     rgba(nth($bg-colors, 2), 0.9),
     rgba(nth($bg-colors, 3), 0.9),
@@ -25,11 +51,24 @@ body {
   padding: 2rem;
 }
 
+=======
+    rgba(#e8e0ed, 0.9), // Light Lavender
+    rgba(#e2deed, 0.9), // Soft Purple Gray
+    rgba(#daddf0, 0.9), // Pale Periwinkle
+    rgba(#e2e7fa, 0.9)  // Icy Blue Lavender
+);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+// 📌 **Login Card - Transparent, No Blur**
+>>>>>>> second version
 .login-card {
   width: 100%;
   max-width: 500px;
   padding: 2.5rem;
   border-radius: 20px;
+<<<<<<< HEAD
   box-shadow: $shadow-lg;
   background: $glass-bg;
   backdrop-filter: blur(10px);
@@ -37,39 +76,135 @@ body {
   .login-title {
     font-size: 2.5rem;
     font-weight: 800;
+=======
+  background: $glass-bg; // ✅ Fully Transparent
+  border: 1px solid $border-light;  // Elegant Border
+  box-shadow: $shadow-lg;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.3);
+  }
+
+  // **Title - Futuristic Gradient**
+  .login-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+>>>>>>> second version
     background: linear-gradient(45deg, $primary-dark 30%, $secondary-accent 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
   }
 
+<<<<<<< HEAD
   .login-subtitle {
     color: $primary-dark;
     opacity: 0.9;
+=======
+  // **Subtitle - Minimal & Clean**
+  .login-subtitle {
+    color: rgba($primary-dark, 0.9);
+    text-align: center;
+>>>>>>> second version
     font-size: 1.1rem;
     margin-bottom: 2rem;
   }
 
+<<<<<<< HEAD
   mat-form-field {
     width: 100%;
     margin-bottom: 1.5rem;
+=======
+  // 📌 **Form Fields - Completely Remove Light Blue Background**
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 1.4rem;
+>>>>>>> second version
 
     mat-icon {
       color: $primary-accent;
     }
+<<<<<<< HEAD
   }
 
   .login-actions {
     margin-top: 2rem;
+=======
+
+    input {
+      width: 100%;
+      background: none !important; // ✅ Ensures No Background
+      background-color: linear-gradient(145deg,
+      rgba(#e8e0ed, 0.9), // Light Lavender
+      rgba(#e2deed, 0.9), // Soft Purple Gray
+      rgba(#daddf0, 0.9), // Pale Periwinkle
+      rgba(#e2e7fa, 0.9)  // Icy Blue Lavender
+  ); // ✅ Forces Pure White Background
+      border: 1px solid rgba(0, 0, 0, 0.2); // ✅ Softer border
+      padding: 10px;
+      font-size: 1rem;
+      color: black !important; // ✅ Forces Black Text
+      box-shadow: none !important; // ✅ Removes any glow or shadow effect
+      transition: border 0.3s ease-in-out, transform 0.2s ease-in-out;
+
+      &:focus {
+        border: 1px solid $primary-accent;
+        box-shadow: none !important; // ✅ Ensures no highlight color
+        transform: scale(1.02);
+      }
+
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.5) !important; // ✅ Subtle placeholder color
+      }
+    }
+
+    // ✅ Ensure no background appears when autofill is used
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+      background: white !important;
+      background-color: white !important;
+      box-shadow: 0 0 0px 1000px white inset !important;
+      -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+      -webkit-text-fill-color: black !important;
+    }
+  }
+
+  // 📌 **Login Button - Futuristic Hover Effect**
+  .login-actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+>>>>>>> second version
 
     button {
       width: 100%;
       padding: 1rem;
       font-size: 1.1rem;
       border-radius: 12px;
+<<<<<<< HEAD
     }
   }
 
+=======
+      background: $primary-accent;
+      color: white;
+      box-shadow: 0px 5px 15px rgba(198, 81, 219, 0.3);
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background: $secondary-accent;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(198, 81, 219, 0.6);
+      }
+    }
+  }
+
+  // 📌 **Footer - Minimalist & Clean**
+>>>>>>> second version
   .login-footer {
     display: flex;
     flex-direction: column;
@@ -79,8 +214,13 @@ body {
     .forgot-password {
       color: $primary-accent;
       text-decoration: none;
+<<<<<<< HEAD
       margin-bottom: 1rem;
       font-weight: 500;
+=======
+      font-weight: 500;
+      margin-bottom: 1rem;
+>>>>>>> second version
       transition: opacity 0.3s;
 
       &:hover {
@@ -95,12 +235,23 @@ body {
         color: $secondary-accent;
         font-weight: 500;
         text-decoration: none;
+<<<<<<< HEAD
+=======
+
+        &:hover {
+          text-decoration: underline;
+        }
+>>>>>>> second version
       }
     }
   }
 }
 
+<<<<<<< HEAD
 // Responsive design
+=======
+// 📌 **Responsive Design for Smaller Screens**
+>>>>>>> second version
 @media (max-width: 600px) {
   .login-card {
     padding: 1.5rem;

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import {Component, NgIterable} from '@angular/core';
+=======
+import { Component, NgIterable } from '@angular/core';
+>>>>>>> second version
 import { CommonModule } from '@angular/common';  // Import necessary modules
 
 @Component({
@@ -11,10 +15,29 @@ export class HomeComponent {
   // Home component logic
   courses: (NgIterable<unknown> & NgIterable<any>) | undefined | null;
   testimonials: (NgIterable<unknown> & NgIterable<any>) | undefined | null;
+<<<<<<< HEAD
 
   navigateToCourse() {
 
   }
+=======
+  
+  // Payment Modal State
+  isPaymentOpen = false;
+
+  // Open Payment Modal
+  openPayment() {
+    this.isPaymentOpen = true;
+  }
+
+  // Close Payment Modal
+  closePayment() {
+    this.isPaymentOpen = false;
+  }
+
+  navigateToCourse() {}
+
+>>>>>>> second version
   categories = ['All', 'Programming', 'Data Science', 'Design', 'Business', 'Marketing'];
 
   featuredCourses = [

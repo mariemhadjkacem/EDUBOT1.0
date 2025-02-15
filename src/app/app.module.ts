@@ -4,6 +4,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';  // ✅ Ensure this is imported
 import { WelcomeComponent } from './features/welcome/welcome.component';
 import { HomeComponent } from './features/home/home.component';
+<<<<<<< HEAD
+=======
+import { CertificationComponent } from './features/certification/certification.component';
+>>>>>>> second version
 import {RouterModule} from '@angular/router';
 import {MatIcon} from '@angular/material/icon';
 import {
@@ -34,8 +38,12 @@ import {ReactiveFormsModule} from '@angular/forms';
     AppComponent,
     WelcomeComponent,
     HomeComponent,
+<<<<<<< HEAD
 
 
+=======
+    CertificationComponent,
+>>>>>>> second version
   ],
   imports: [
     BrowserModule,

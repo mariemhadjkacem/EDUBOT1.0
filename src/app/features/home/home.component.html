@@ -1,6 +1,10 @@
 <app-navbar></app-navbar>
 
+<<<<<<< HEAD
 <main>
+=======
+<main [class.blurred]="isPaymentOpen">
+>>>>>>> second version
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="content-container">
@@ -20,6 +24,11 @@
     </div>
   </section>
 
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> second version
   <!-- Features Grid -->
   <section class="features-section">
     <div class="features-grid">
@@ -307,11 +316,174 @@
     });
   </script>
 
+<<<<<<< HEAD
   <!-- Chat Bot Floating Button -->
   <button class="chatbot-button" mat-fab color="primary">
     <mat-icon>smart_toy</mat-icon>
   </button>
 </main>
+=======
+ <!-- Chatbot Floating Button -->
+<button class="chatbot-button" mat-fab color="primary" onclick="toggleChatbot()">
+  <mat-icon>smart_toy</mat-icon>
+</button>
+  <!-- Chatbot Slider -->
+<div class="chatbot-slider" id="chatbot-slider">
+  <div class="chatbot-header">
+      <h2>Chatbot Assistant</h2>
+      <button class="close-button" onclick="toggleChatbot()">&times;</button>
+  </div>
+  <div class="chatbot-messages" id="chatbot-messages">
+      <div class="message bot">Hello! How can I assist you today?</div>
+  </div>
+  <div class="chatbot-input">
+      <input type="text" id="chatbot-input" placeholder="Type your message...">
+      <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+
+
+<style>
+  .chatbot-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+  }
+
+  .chatbot-slider {
+    position: fixed;
+    bottom: 0;
+    right: -350px;
+    width: 300px;
+    height: 400px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out, right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 10px 0 0;
+    z-index: 9999;
+}
+
+.chatbot-slider.active {
+    transform: translateX(-350px);
+    right: 20px;
+}
+
+
+  .chatbot-header {
+      background: #6200ea;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px 10px 0 0;
+  }
+
+  .chatbot-messages {
+      flex-grow: 1;
+      padding: 10px;
+      overflow-y: auto;
+  }
+
+  .message {
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 5px;
+      max-width: 80%;
+  }
+
+  .message.bot {
+      background: #e0e0e0;
+      align-self: flex-start;
+  }
+
+  .message.user {
+      background: #6200ea;
+      color: white;
+      align-self: flex-end;
+  }
+
+  .chatbot-input {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #ddd;
+  }
+
+  .chatbot-input input {
+      flex-grow: 1;
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+  }
+
+  .chatbot-input button {
+      background: #6200ea;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+  }
+</style>
+
+         <!-- Payment Button -->
+         <button mat-raised-button color="primary" class="payment-btn" (click)="openPayment()">
+          <mat-icon>credit_card</mat-icon> Proceed to Payment
+        </button>
+      <div class="visual-content">
+        <img ngSrc="./assets/images/logo.svg" alt="Learning illustration" class="hero-image">
+      </div>
+</main>
+<!-- Payment Modal -->
+<div class="payment-overlay" *ngIf="isPaymentOpen">
+  <mat-card class="payment-card">
+    <mat-card-header>
+      <h1 class="payment-title">Complete Your Purchase</h1>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form autocomplete="off">
+        <mat-form-field appearance="outline">
+          <mat-label>Card Number</mat-label>
+          <input matInput required autocomplete="off" autocorrect="off" spellcheck="false">
+          <mat-icon matPrefix>credit_card</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Expiry Date</mat-label>
+          <input matInput type="text" placeholder="MM/YY" required autocomplete="off" autocorrect="off" spellcheck="false">
+          <mat-icon matPrefix>event</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>CVV</mat-label>
+          <input matInput type="password" required autocomplete="new-password" autocorrect="off" spellcheck="false">
+          <mat-icon matPrefix>lock</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Cardholder Name</mat-label>
+          <input matInput required autocomplete="off" autocorrect="off" spellcheck="false">
+          <mat-icon matPrefix>person</mat-icon>
+        </mat-form-field>
+
+        <div class="payment-actions">
+          <button mat-raised-button color="primary" type="submit">Pay Now</button>
+          <button mat-stroked-button color="warn" (click)="closePayment()">Cancel</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+<script>
+  
+  </script>
+>>>>>>> second version
 
 <app-footer></app-footer>
 

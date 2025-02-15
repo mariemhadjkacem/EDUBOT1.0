@@ -20,6 +20,10 @@
     "@angular/platform-browser": "^19.1.0",
     "@angular/platform-browser-dynamic": "^19.1.0",
     "@angular/router": "^19.1.0",
+<<<<<<< HEAD
+=======
+    "html2canvas": "^1.4.1",
+>>>>>>> second version
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
@@ -38,4 +42,8 @@
     "sass": "^1.84.0",
     "typescript": "~5.7.2"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> second version

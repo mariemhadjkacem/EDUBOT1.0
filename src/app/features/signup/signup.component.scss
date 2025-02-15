@@ -1,8 +1,15 @@
+<<<<<<< HEAD
+=======
+@use "sass:list";
+
+// 🎨 **Refined Color Palette**
+>>>>>>> second version
 $primary-dark: #0f0a5f;
 $primary-accent: #c651db;
 $secondary-accent: #ae56a0;
 $light-accent-1: #deafec;
 $light-accent-2: #bcaae1;
+<<<<<<< HEAD
 $bg-colors: #e8e0ed, #e2deed, #daddf0, #e2e7fa;
 $bg-gradient: linear-gradient(135deg, #e8e0ed, #e2deed,#daddf0,#e2e7fa );
 $glass-bg: rgba(255, 255, 255, 0.1);
@@ -54,20 +61,148 @@ body {
   mat-form-field {
     width: 100%;
     margin-bottom: 1.5rem;
+=======
+$bg-gradient: linear-gradient(135deg, #e8e0ed, #e2deed, #daddf0, #e2e7fa);
+$glass-bg: rgba(255, 255, 255, 0.08); // ✅ Fully Transparent, No Blur
+$border-light: rgba(255, 255, 255, 0.25); // Elegant Border
+$shadow-lg: 0px 8px 20px rgba(0, 0, 0, 0.3);  // Futuristic Shadow
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: $bg-gradient;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+// 📌 **Signup Container**
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(145deg,
+    rgba(#e8e0ed, 0.9), // Light Lavender
+    rgba(#e2deed, 0.9), // Soft Purple Gray
+    rgba(#daddf0, 0.9), // Pale Periwinkle
+    rgba(#e2e7fa, 0.9)  // Icy Blue Lavender
+);
+}
+
+// 📌 **Signup Card**
+.signup-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 2.5rem;
+  border-radius: 18px;
+  background: $glass-bg; // ✅ Fully Transparent
+  border: 1px solid $border-light;  // Elegant Border
+  box-shadow: $shadow-lg;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.4);
+  }
+
+  // **Title - Futuristic Gradient**
+  .signup-title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(45deg, $primary-dark 20%, $secondary-accent 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.2rem;
+  }
+
+  // **Subtitle - Minimal & Clean**
+  .signup-subtitle {
+    color: rgba($primary-dark, 0.9);
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 1.8rem;
+  }
+
+  // 📌 **Form Fields - Completely Remove Light Blue Background**
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 1.4rem;
+>>>>>>> second version
 
     mat-icon {
       color: $primary-accent;
     }
+<<<<<<< HEAD
   }
 
   .terms-checkbox {
     margin: 1.5rem 0;
     color: $primary-dark;
+=======
+
+    input {
+      width: 100%;
+      background: none !important; // ✅ Ensures No Background
+      background-color: linear-gradient(145deg,
+      rgba(#e8e0ed, 0.9), // Light Lavender
+      rgba(#e2deed, 0.9), // Soft Purple Gray
+      rgba(#daddf0, 0.9), // Pale Periwinkle
+      rgba(#e2e7fa, 0.9)  // Icy Blue Lavender
+  ); // ✅ Forces Pure White Background
+      border: 1px solid rgba(0, 0, 0, 0.2); // ✅ Softer border
+      padding: 10px;
+      font-size: 1rem;
+      color: black !important; // ✅ Forces Black Text
+      box-shadow: none !important; // ✅ Removes any glow or shadow effect
+      transition: border 0.3s ease-in-out, transform 0.2s ease-in-out;
+
+      &:focus {
+        border: 1px solid $primary-accent;
+        box-shadow: none !important; // ✅ Ensures no highlight color
+        transform: scale(1.02);
+      }
+
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.5) !important; // ✅ Subtle placeholder color
+      }
+    }
+
+    // ✅ Ensure no background appears when autofill is used
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+      background: white !important;
+      background-color: linear-gradient(145deg,
+      rgba(#e8e0ed, 0.9), // Light Lavender
+      rgba(#e2deed, 0.9), // Soft Purple Gray
+      rgba(#daddf0, 0.9), // Pale Periwinkle
+      rgba(#e2e7fa, 0.9)  // Icy Blue Lavender
+  );
+      box-shadow: 0 0 0px 1000px white inset !important;
+      -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+      -webkit-text-fill-color: black !important;
+    }
+  }
+
+  // 📌 **Terms & Conditions**
+  .terms-checkbox {
+    margin: 1.5rem 0;
+    color: $primary-dark;
+    display: flex;
+    align-items: center;
+>>>>>>> second version
 
     .terms-link {
       color: $primary-accent;
       text-decoration: none;
       font-weight: 500;
+<<<<<<< HEAD
+=======
+      margin-left: 5px;
+>>>>>>> second version
 
       &:hover {
         text-decoration: underline;
@@ -75,23 +210,49 @@ body {
     }
   }
 
+<<<<<<< HEAD
   .signup-actions {
     margin-top: 2rem;
 
     button {
       width: 100%;
       padding: 1rem;
+=======
+  // 📌 **Signup Button - Futuristic Hover Effect**
+  .signup-actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+
+    button {
+      width: 100%;
+      padding: 0.9rem;
+>>>>>>> second version
       font-size: 1.1rem;
       border-radius: 12px;
       background: $primary-accent;
       color: white;
+<<<<<<< HEAD
 
       &:hover {
         background: $secondary-accent;
+=======
+      box-shadow: 0px 5px 15px rgba(198, 81, 219, 0.3);
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background: $secondary-accent;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba(198, 81, 219, 0.6);
+>>>>>>> second version
       }
     }
   }
 
+<<<<<<< HEAD
+=======
+  // 📌 **Footer - Minimalist & Clean**
+>>>>>>> second version
   .signup-footer {
     display: flex;
     flex-direction: column;
@@ -105,12 +266,23 @@ body {
         color: $secondary-accent;
         font-weight: 500;
         text-decoration: none;
+<<<<<<< HEAD
+=======
+
+        &:hover {
+          text-decoration: underline;
+        }
+>>>>>>> second version
       }
     }
   }
 }
 
+<<<<<<< HEAD
 // Responsive design
+=======
+// 📌 **Responsive Design for Smaller Screens**
+>>>>>>> second version
 @media (max-width: 600px) {
   .signup-card {
     padding: 1.5rem;
