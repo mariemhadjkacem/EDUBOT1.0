@@ -1,0 +1,25 @@
+<section class="hero-section">
+    <div class="container">
+      <!-- Hero Section -->
+      <div class="text-center my-5">
+        <h1 class="fw-bold text-primary">Let's Start Learning 🚀</h1>
+        <p class="lead">Explore our best courses and enhance your skills.</p>
+      </div>
+  
+      <!-- Courses Section -->
+      <h2 class="our-courses-title">Our Courses</h2>
+  
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let course of formations">
+          <div class="card shadow-sm border-0 rounded-4">
+            <img [src]="course.image" class="card-img-top rounded-top-4" alt="{{course.title}}">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">{{course.title}}</h5>
+              <p class="card-text text-muted">{{course.description}}</p>
+              <a [routerLink]="['/formation', course.id]" class="btn btn-gradient" target="_blank" routerLinkActive="active">Start Learning</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

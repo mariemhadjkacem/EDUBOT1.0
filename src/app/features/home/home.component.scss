@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
+
 @use "sass:list";
->>>>>>> second version
 $primary-dark: #0f0a5f;
 $primary-accent: #c651db;
 $secondary-accent: #ae56a0;
@@ -20,17 +18,10 @@ body {
 .hero-section {
   background: linear-gradient(
       145deg,
-<<<<<<< HEAD
-      nth($bg-colors, 1) 0%,
-      nth($bg-colors, 2) 30%,
-      nth($bg-colors, 3) 70%,
-      nth($bg-colors, 4) 100%
-=======
       list.nth($bg-colors, 1) 0%,
       list.nth($bg-colors, 2) 30%,
       list.nth($bg-colors, 3) 70%,
       list.nth($bg-colors, 4) 100%
->>>>>>> second version
   );
   min-height: 90vh;
   color: $primary-dark;
@@ -619,8 +610,7 @@ p {
     transform: scale(1.1);
   }
 }
-<<<<<<< HEAD
-=======
+
 // 🔹 **Improved Blur Background Effect**
 .blur-background {
   filter: blur(10px) brightness(1.2); // Soft blur & increase brightness
@@ -713,4 +703,3 @@ p {
     }
   }
 }
->>>>>>> second version

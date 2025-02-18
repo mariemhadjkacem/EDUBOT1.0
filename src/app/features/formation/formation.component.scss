@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* Color Variables */
+$primary-dark: #0f0a5f;
+$primary-accent: #c651db;
+$secondary-accent: #ae56a0;
+$light-accent-1: #deafec;
+$light-accent-2: #bcaae1;
+$bg-colors: (#e8e0ed, #e2deed, #daddf0, #e2e7fa);
+
+/* General Styles */
+.hero-section {
+  background: linear-gradient(
+      145deg,
+      nth($bg-colors, 1) 0%,
+      nth($bg-colors, 2) 30%,
+      nth($bg-colors, 3) 70%,
+      nth($bg-colors, 4) 100%
+  );
+  min-height: 100vh;
+  color: $primary-dark;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  }
+body {
+  background: linear-gradient(
+      145deg,
+      nth($bg-colors, 1) 0%,
+      nth($bg-colors, 2) 30%,
+      nth($bg-colors, 3) 70%,
+      nth($bg-colors, 4) 100%
+  );
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Hero Section */
+
+.text-center.my-5 {
+  flex: 1;
+  max-width: 700px;
+  margin-left: 3rem;
+
+  .fw-bold.text-primary {
+    font-size: 3.8rem;
+    line-height: 1.15;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, $primary-dark 30%, $secondary-accent 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.text-center {
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, $primary-dark 30%, $secondary-accent 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    font-size: 1.4rem;
+    color: rgba($primary-dark, 0.9);
+  }
+}
+
+/* Courses Section */
+.our-courses-title {
+  font-size: 2.8rem; // Plus grand pour plus d'impact
+  font-weight: 800;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, $primary-dark, $primary-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  padding-bottom: 15px;
+  text-shadow: 3px 3px 10px rgba($primary-dark, 0.3); // Effet de glow léger
+}
+
+/* Ajout d'une ligne décorative animée sous le titre */
+.our-courses-title::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 5px;
+  background: linear-gradient(90deg, $primary-accent, $secondary-accent);
+  border-radius: 3px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Effet d'animation au survol */
+.our-courses-title:hover::after {
+  width: 130px; // La ligne s'allonge légèrement au hover
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba($primary-dark, 0.1);
+  overflow: hidden;
+  margin-bottom: 25px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba($primary-accent, 0.15);
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $primary-dark;
+  }
+
+  .card-text {
+    color: rgba($primary-dark, 0.8);
+    font-size: 1rem;
+  }
+}
+
+/* Button Style */
+.btn-gradient {
+  text-decoration: none;
+  display: inline-block;
+  background: $primary-accent;
+  color: white !important;
+  font-size: 1.1rem;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px rgba($primary-accent, 0.2);
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba($primary-accent, 0.3);
+  }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .text-center {
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .text-center {
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
+  .btn-gradient {
+    font-size: 1rem;
+    padding: 0.7rem 1.8rem;
+  }
+}
