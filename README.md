@@ -1,59 +1,66 @@
-# EDUBOT
+# EduBot
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
+## Introduction
+EduBot is an innovative web platform designed to provide certified training and interactive exercises through an AI-powered chatbot. It offers courses in various domains, including cybersecurity, web and mobile development, and data science. The platform ensures a seamless learning experience by integrating structured resources and an intelligent recommendation system for exercises.
 
-## Development server
+## Features
+- **Certified Training Programs**: Access high-quality courses in multiple disciplines.
+- **AI-Powered Chatbot**: Get instant assistance and personalized exercise recommendations.
+- **Interactive Exercises**: Enhance learning with practical hands-on exercises.
+- **User-Friendly Interface**: Intuitive and responsive web design for seamless navigation.
+- **Robust Backend**: Ensures security, scalability, and performance.
 
-To start a local development server, run:
+## Technology Stack
+EduBot is built using modern web technologies to ensure a reliable and efficient system:
+- **Frontend**: Angular
+- **Backend**: Spring Boot
+- **Database**: PostgreSQL & MySQL
 
-```bash
-ng serve
-```
+## Installation & Setup
+Follow these steps to set up the project locally:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Prerequisites
+- Node.js & npm installed
+- Angular CLI installed
+- Java & Spring Boot configured
+- PostgreSQL/MySQL database setup
 
-## Code scaffolding
+### Steps
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repository/edubot.git
+   cd edubot
+   ```
+2. Install frontend dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the frontend application:
+   ```sh
+   ng serve
+   ```
+4. Configure and start the backend server:
+   - Ensure database configurations are set in `application.properties`.
+   - Run the Spring Boot application from your IDE or terminal.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Usage
+- Visit `http://localhost:4200/` in your browser.
+- Sign up or log in to access courses and exercises.
+- Interact with the chatbot for learning assistance.
 
-```bash
-ng generate component component-name
-```
+## Contribution
+We welcome contributions to enhance EduBot. To contribute:
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature-xyz`).
+3. Commit your changes (`git commit -m 'Add feature XYZ'`).
+4. Push to your branch (`git push origin feature-xyz`).
+5. Submit a pull request.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## License
+EduBot is licensed under [MIT License](LICENSE).
 
-```bash
-ng generate --help
-```
+## Contact
+For any inquiries or support, feel free to reach out:
+- Email: support@edubot.com
+- Website: [www.edubot.com](https://www.edubot.com)
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
