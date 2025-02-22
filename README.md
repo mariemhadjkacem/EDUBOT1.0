@@ -1,4 +1,3 @@
-je veux ajouter quelques coordonées de bdd comme cecii # EduBot
 
 ## Introduction
 EduBot is an innovative web platform designed to provide certified training and interactive exercises through an AI-powered chatbot. It offers courses in various domains, including cybersecurity, web and mobile development, and data science. The platform ensures a seamless learning experience by integrating structured resources and an intelligent recommendation system for exercises.
@@ -63,11 +62,3 @@ EduBot is licensed under [MIT License](LICENSE).
 For any inquiries or support, feel free to reach out:
 - Email: support@edubot.com
 - Website: [www.edubot.com](https://www.edubot.com)
-Database Connection Details:
-Below are the credentials for accessing the PostgreSQL database:
-Host/Server Address: 196.176.77.130
-Port: 5432
-Database Name: telemedecin_db
-Username: ichrak
-Password: ichrak2511*
-Connection String (if needed): postgresql://ichrak:ichrak2511*@196.176.77.130:5432/telemedecin_db
